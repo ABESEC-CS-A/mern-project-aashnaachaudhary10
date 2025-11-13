@@ -1,0 +1,12 @@
+.navbar{
+    background-color: maroon;
+    color: white;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+    
+}
