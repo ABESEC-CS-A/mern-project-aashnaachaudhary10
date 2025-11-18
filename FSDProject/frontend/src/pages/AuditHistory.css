@@ -1,0 +1,43 @@
+.audit-page {
+  padding: 30px;
+}
+
+.audit-page h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+}
+
+.audit-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.audit-table th {
+  background: #1f2a40;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+.audit-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ececec;
+}
+
+.present {
+  color: green;
+  font-weight: bold;
+}
+
+.absent {
+  color: red;
+  font-weight: bold;
+}
+
+.audit-table tr:hover {
+  background: #f7f9fc;
+}

@@ -1,4 +1,6 @@
 import "./StudentDashboard.css";
+import { Link } from "react-router-dom";
+
 import { useState } from "react";
 
 export default function StudentDashboard() {
@@ -10,13 +12,29 @@ export default function StudentDashboard() {
       <aside className="sidebar">
         <h2 className="logo">📘 Attendance</h2>
         <ul>
-          <li className="active">🏠 Dashboard</li>
-          <li>📄 My Attendance</li>
-          <li>📊 Audit History</li>
-          <li>📝 Exempt Requests</li>
-          <li>⚙ Settings</li>
+          <li className="active">
+            <Link to="/student/dashboard">🏠 Dashboard</Link>
+          </li>
+
+          <li>
+        <Link to="/student/my-attendance">📄 My Attendance</Link>
+        </li>
+
+        <li>
+        <Link to="/student/audit-history">📊 Audit History</Link>
+        </li>
+
+        <li>
+        <Link to="/student/exempt-requests">📝 Exempt Requests</Link>
+        </li>
+
+        <li>
+        <Link to="/student/settings">⚙ Settings</Link>
+        </li>
         </ul>
       </aside>
+
+
 
       {/* Main Content */}
       <main className="content">

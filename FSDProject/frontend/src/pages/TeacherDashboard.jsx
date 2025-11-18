@@ -1,83 +1,82 @@
-import React from "react";
-import DashboardLayout from "../layouts/DashboardLayout";
 import "./TeacherDashboard.css";
+import { useState } from "react";
 
-const TeacherDashboard = () => {
+export default function TeacherDashboard() {
+  const [showNotifs, setShowNotifs] = useState(false);
+
   return (
-    <DashboardLayout>
+    <div className="teacher-dashboard">
 
-      <div className="teacher-dashboard">
+      {/* Sidebar */}
+      <aside className="teacher-sidebar">
+        <h2 className="teacher-logo">📘 Teacher Panel</h2>
 
-        {/* Header */}
-        <h2 className="dashboard-heading">Teacher Dashboard</h2>
+        <ul>
+          <li className="active">🏠 Dashboard</li>
+          <li>📝 Take Attendance</li>
+          <li>📄 Attendance Records</li>
+          <li>👥 Student List</li>
+          <li>📚 Subjects</li>
+          <li>📨 Requests</li>
+          <li>⚙ Settings</li>
+        </ul>
+      </aside>
 
-        {/* Top Stats */}
-        <div className="stats-grid">
-          <div className="stat-card">
-            <h3>5</h3>
-            <p>Classes Today</p>
+      {/* Content */}
+      <main className="teacher-content">
+
+        {/* TOP BAR */}
+        <header className="teacher-topbar">
+          <h1>Welcome, Teacher 👋</h1>
+
+          <div className="teacher-notif-wrapper">
+            <button
+              className="teacher-notif"
+              onClick={() => setShowNotifs(!showNotifs)}
+            >
+              🔔
+            </button>
+
+            {showNotifs && (
+              <div className="teacher-notif-dropdown">
+                <p><b>New:</b> 1 student submitted an exemption request</p>
+                <p><b>Reminder:</b> Attendance pending for today's classes</p>
+              </div>
+            )}
+          </div>
+        </header>
+
+        {/* CARDS */}
+        <section className="teacher-cards">
+          <div className="teacher-card blue">
+            <h3>Total Students</h3>
+            <p className="value">120</p>
           </div>
 
-          <div className="stat-card">
-            <h3>180</h3>
-            <p>Total Students</p>
+          <div className="teacher-card green">
+            <h3>Classes Today</h3>
+            <p className="value">4</p>
           </div>
 
-          <div className="stat-card">
-            <h3>3</h3>
-            <p>Attendance Marked</p>
+          <div className="teacher-card orange">
+            <h3>Pending Requests</h3>
+            <p className="value">3</p>
           </div>
+        </section>
 
-          <div className="stat-card">
-            <h3>2</h3>
-            <p>Pending Correction Requests</p>
+        {/* QUICK ACTIONS */}
+        <section className="teacher-quick-actions">
+          <h2>Quick Actions</h2>
+
+          <div className="qa-grid">
+            <button className="qa-btn">📝 Take Attendance</button>
+            <button className="qa-btn">📄 View Records</button>
+            <button className="qa-btn">👥 Manage Students</button>
+            <button className="qa-btn">📚 Manage Subjects</button>
           </div>
-        </div>
+        </section>
 
-        {/* Classes List */}
-        <div className="section">
-          <h3 className="section-title">Today's Classes</h3>
-
-          <div className="class-list">
-            <div className="class-card">
-              <h4>OOP (CSE-A)</h4>
-              <p>10:00 AM – 11:00 AM</p>
-              <button className="btn-primary">Mark Attendance</button>
-            </div>
-
-            <div className="class-card">
-              <h4>DBMS (CSE-B)</h4>
-              <p>12:00 PM – 1:00 PM</p>
-              <button className="btn-primary">Mark Attendance</button>
-            </div>
-
-            <div className="class-card">
-              <h4>DSA Lab (CSE-A)</h4>
-              <p>2:00 PM – 4:00 PM</p>
-              <button className="btn-primary">Mark Attendance</button>
-            </div>
-          </div>
-        </div>
-
-        {/* Correction Requests */}
-        <div className="section">
-          <h3 className="section-title">Pending Correction Requests</h3>
-
-          <div className="correction-box">
-            <p><strong>Aashna Chaudhary</strong> → Marked absent by mistake on 14 Nov</p>
-            <button className="btn-secondary">Review</button>
-          </div>
-
-          <div className="correction-box">
-            <p><strong>Riya Sharma</strong> → Medical Leave (submit exemption)</p>
-            <button className="btn-secondary">Review</button>
-          </div>
-        </div>
-
-      </div>
-
-    </DashboardLayout>
+      </main>
+    </div>
   );
-};
-
-export default TeacherDashboard;
+}
