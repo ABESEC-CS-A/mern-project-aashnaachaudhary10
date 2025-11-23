@@ -1,38 +1,42 @@
 .attendance-page {
-  padding: 20px;
+  padding: 30px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0d1a, #141a2e);
+  color: #e8eaff;
 }
 
+/* TITLE */
 .page-title {
-  font-size: 26px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 700;
+  color: #8ab4ff;
   margin-bottom: 20px;
 }
 
+/* TABLE CARD */
 .attendance-table {
-  background: white;
+  background: rgba(255,255,255,0.07);
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(109,142,255,0.2);
+  margin-top: 20px;
 }
 
 .table-header,
 .table-row {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 2fr;
-  padding: 12px 0;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: #d9deff;
 }
 
 .table-header {
   font-weight: bold;
-  background: #f7f7f7;
+  background: rgba(255,255,255,0.05);
 }
 
-.table-row:last-child {
-  border-bottom: none;
-}
-
-/* Progress bar */
+/* Progress Bar */
 .progress-wrapper {
   display: flex;
   align-items: center;
@@ -42,19 +46,21 @@
 .progress-bar {
   width: 100%;
   height: 10px;
-  background: #e2e8f0;
+  background: rgba(255,255,255,0.12);
   border-radius: 20px;
   overflow: hidden;
 }
 
 .progress-fill {
   height: 100%;
-  background: #4f6bdc;
+  background: #6f8bff;
   border-radius: 20px;
+  box-shadow: 0 0 10px #6f8bff;
 }
 
 .percent {
   font-weight: bold;
   width: 40px;
   text-align: right;
+  color: #b3c8ff;
 }

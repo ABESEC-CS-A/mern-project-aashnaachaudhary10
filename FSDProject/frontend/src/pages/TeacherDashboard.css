@@ -1,85 +1,52 @@
+/* 🌌 LAYOUT */
 .teacher-dashboard {
   display: flex;
   height: 100vh;
-  background: #f4f6fa;
+  background: radial-gradient(circle at top, #1a1a2e, #0a0a15);
+  color: white;
+  font-family: "Poppins", sans-serif;
 }
 
-/* SIDEBAR */
+/* 🌌 SIDEBAR */
 .teacher-sidebar {
-  width: 220px;
-  background: #273353;
-  padding: 20px 0;
-  color: white;
+  width: 230px;
+  background: #0f0f1a;
+  padding-top: 25px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  border-right: 1px solid rgba(255,255,255,0.08);
 }
 
 .teacher-logo {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   padding-left: 20px;
-  margin-bottom: 20px;
+  color: #00d2ff;
+  margin-bottom: 25px;
 }
 
 .teacher-sidebar ul li {
   list-style: none;
   padding: 14px 20px;
   cursor: pointer;
-  color: #cbd3e1;
-  transition: 0.2s;
-  border-radius: 6px;
+  color: #b8b8d4;
+  transition: 0.25s;
 }
 
-.teacher-sidebar ul li:hover {
-  background: #3c4a6b;
-}
-
+.teacher-sidebar ul li:hover,
 .teacher-sidebar ul li.active {
-  background: #4f6bdc;
-  color: white;
+  background: rgba(0,212,255,0.15);
+  color: #00d2ff;
+  border-radius: 8px;
 }
 
-/* MAIN CONTENT */
+/* 🌌 CONTENT */
 .teacher-content {
   flex: 1;
   padding: 25px;
-  overflow-y: auto;
 }
 
-/* TOP BAR */
-.teacher-topbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 25px;
-}
-
-.teacher-notif-wrapper {
-  position: relative;
-}
-
-.teacher-notif {
-  font-size: 18px;
-  cursor: pointer;
-  background: white;
-  border: none;
-  padding: 8px;
-  border-radius: 8px;
-}
-
-.teacher-notif-dropdown {
-  position: absolute;
-  right: 0;
-  top: 40px;
-  background: white;
-  padding: 12px;
-  border-radius: 8px;
-  width: 220px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-
-/* DASHBOARD CARDS */
+/* 🌌 CARDS */
 .teacher-cards {
   display: flex;
   gap: 20px;
@@ -88,41 +55,61 @@
 
 .teacher-card {
   flex: 1;
-  padding: 20px;
-  color: white;
-  border-radius: 10px;
+  padding: 25px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  
+  border-radius: 12px;
+  text-shadow: 0px 0px 10px rgba(0,255,255,0.1);
 }
 
 .teacher-card .value {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 36px;
+  font-weight: 700;
 }
 
-.blue { background: #4f6bdc; }
-.green { background: #2ecc71; }
-.orange { background: #f39c12; }
-
-/* QUICK ACTIONS */
-.teacher-quick-actions h2 {
-  margin-bottom: 15px;
-}
-
+/* 🌌 QUICK ACTIONS */
 .qa-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(4,1fr);
+  gap: 18px;
 }
 
 .qa-btn {
-  padding: 14px;
+  padding: 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
   font-size: 16px;
-  background: white;
-  border: 1px solid #ddd;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.25s;
+ 
 }
 
 .qa-btn:hover {
-  background: #edf1f8;
+  background: rgba(0,212,255,0.15);
+  border-color: #00d2ff;
+}
+
+/* 🌌 NOTIFICATION */
+.teacher-notif {
+  background: rgba(255,255,255,0.1);
+  color: #00d2ff;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.teacher-notif-dropdown {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 230px;
+  background: #151525;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 18px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.08);
 }

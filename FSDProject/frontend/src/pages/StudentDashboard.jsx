@@ -12,9 +12,7 @@ export default function StudentDashboard() {
       <aside className="sidebar">
         <h2 className="logo">📘 Attendance</h2>
         <ul>
-          <li className="active">
-            <Link to="/student/dashboard">🏠 Dashboard</Link>
-          </li>
+          
 
           <li>
         <Link to="/student/my-attendance">📄 My Attendance</Link>
@@ -39,7 +37,7 @@ export default function StudentDashboard() {
       {/* Main Content */}
       <main className="content">
         <header className="topbar">
-          <h1>Welcome, Aashna 👋</h1>
+          <h1>Welcome, Aashnaa 👋</h1>
 
           <div className="notif-wrapper">
             <button

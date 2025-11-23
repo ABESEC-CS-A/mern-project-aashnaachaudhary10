@@ -1,0 +1,59 @@
+.settings-page {
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  color: white;
+  font-family: Poppins;
+}
+
+.setting-card {
+  background: #12172e;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.setting-card h2 {
+  margin-bottom: 10px;
+}
+
+.setting-card label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.setting-card input,
+.setting-card select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: none;
+  background: #1e2540;
+  color: white;
+}
+
+.save-btn {
+  margin-top: 12px;
+  background: #4f6bdc;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.logout-btn {
+  width: 100%;
+  padding: 12px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  margin-top: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+}

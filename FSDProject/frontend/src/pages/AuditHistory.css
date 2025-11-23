@@ -1,43 +1,50 @@
 .audit-page {
   padding: 30px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0d1a, #11182b);
+  color: #e5e7f5;
 }
 
 .audit-page h1 {
-  font-size: 26px;
+  font-size: 28px;
   margin-bottom: 20px;
+  color: #8ab4ff;
 }
 
+/* TABLE */
 .audit-table {
   width: 100%;
   border-collapse: collapse;
-  background: white;
-  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 0 18px rgba(109,142,255,0.2);
 }
 
 .audit-table th {
-  background: #1f2a40;
-  color: white;
-  padding: 12px;
+  background: rgba(20, 25, 40, 0.8);
+  color: #bcd3ff;
+  padding: 14px;
   text-align: left;
 }
 
 .audit-table td {
-  padding: 12px;
-  border-bottom: 1px solid #ececec;
+  padding: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  color: #e5e7f5;
 }
 
+.audit-table tr:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* STATUS COLORS */
 .present {
-  color: green;
+  color: #3bd671;
   font-weight: bold;
 }
 
 .absent {
-  color: red;
+  color: #ff6161;
   font-weight: bold;
-}
-
-.audit-table tr:hover {
-  background: #f7f9fc;
 }

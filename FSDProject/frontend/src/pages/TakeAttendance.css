@@ -1,0 +1,132 @@
+.take-att-page {
+  padding: 25px;
+  animation: fadeIn 0.3s ease;
+  font-family: Poppins, sans-serif;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.take-att-page h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #1f2a40;
+}
+
+/* Filters */
+.filters-box {
+  display: flex;
+  gap: 25px;
+  background: white;
+  padding: 18px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+}
+
+.filter-item label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.filter-item input,
+.filter-item select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.filter-item input:focus,
+.filter-item select:focus {
+  border-color: #4f6bdc;
+  box-shadow: 0 0 0 2px rgba(79,107,220,0.2);
+  outline: none;
+}
+
+/* Table */
+.take-att-table {
+  width: 100%;
+  background: white;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.take-att-table th {
+  background: #1f2a40;
+  color: white;
+  padding: 14px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.take-att-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.take-att-table tr:hover td {
+  background: #f5f8ff;
+}
+
+/* Buttons */
+.present-btn,
+.absent-btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.present-btn {
+  background: #2ecc71;
+  color: white;
+}
+
+.present-btn:hover {
+  background: #27ae60;
+}
+
+.absent-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.absent-btn:hover {
+  background: #c0392b;
+}
+
+/* Submit Button */
+.submit-att-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  background: #4f6bdc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.submit-att-btn:hover {
+  background: #3a56c9;
+  transform: translateY(-2px);
+}
