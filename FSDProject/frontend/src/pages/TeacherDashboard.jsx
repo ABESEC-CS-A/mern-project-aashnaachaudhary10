@@ -1,5 +1,7 @@
 import "./TeacherDashboard.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 export default function TeacherDashboard() {
   const [showNotifs, setShowNotifs] = useState(false);
@@ -12,14 +14,31 @@ export default function TeacherDashboard() {
         <h2 className="teacher-logo">📘 Teacher Panel</h2>
 
         <ul>
-          <li className="active">🏠 Dashboard</li>
-          <li>📝 Take Attendance</li>
-          <li>📄 Attendance Records</li>
-          <li>👥 Student List</li>
-          <li>📚 Subjects</li>
-          <li>📨 Requests</li>
-          <li>⚙ Settings</li>
+          <li>
+            <Link to="/teacher/take-attendance">📝 Take Attendance</Link>
+            </li>
+
+          <li>
+            <Link to="/teacher/attendance-records">📄 Attendance Records</Link>
+          </li>
+
+          <li>
+            <Link to="/teacher/student-list">👥 Student List</Link>
+          </li>
+
+          <li>
+            <Link to="/teacher/subjects">📚 Subjects</Link>
+          </li>
+
+          <li>
+            <Link to="/teacher/requests">📨 Requests</Link>
+          </li>
+
+          <li>
+            <Link to="/teacher/settings">⚙ Settings</Link>
+          </li>
         </ul>
+
       </aside>
 
       {/* Content */}

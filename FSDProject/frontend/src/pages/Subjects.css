@@ -1,0 +1,86 @@
+.subjects-page {
+  padding: 30px;
+  color: #e0e6f5;
+  animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.subjects-page h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #8ab4ff;
+}
+
+/* Form */
+.sub-form {
+  background: rgba(20, 20, 30, 0.8);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  display: flex;
+  gap: 15px;
+  box-shadow: 0 0 15px rgba(0, 132, 255, 0.2);
+  
+}
+
+.sub-form input {
+  padding: 12px;
+  border-radius: 8px;
+  background: #1b1e2d;
+  border: 1px solid #2f3b55;
+  color: white;
+  width: 220px;
+}
+
+.sub-form input:focus {
+  border-color: #5c8aff;
+  outline: none;
+}
+
+.sub-form button {
+  padding: 12px 18px;
+  background: #4f6bdc;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.sub-form button:hover {
+  background: #3a56c9;
+  transform: translateY(-2px);
+}
+
+/* Table */
+.sub-table {
+  width: 100%;
+  background: rgba(18, 18, 27, 0.85);
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 18px rgba(0, 132, 255, 0.25);
+}
+
+.sub-table th {
+  background: #0f1a33;
+  color: #9fc2ff;
+  padding: 14px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.sub-table td {
+  padding: 14px;
+  border-bottom: 1px solid #2a3550;
+}
+
+.sub-table tr:hover td {
+  background: rgba(60, 100, 170, 0.1);
+}

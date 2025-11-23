@@ -1,0 +1,87 @@
+.studentlist-page {
+  padding: 30px;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #1f2a40;
+}
+
+/* Search Box */
+.student-search {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.student-search input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+.student-search button {
+  padding: 12px 20px;
+  background: #4f6bdc;
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.student-search button:hover {
+  background: #3a55c5;
+}
+
+/* Table */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.student-table th {
+  background: #1f2a40;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+.student-table td {
+  padding: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.student-table tr:hover td {
+  background: #f3f4fc;
+}
+
+/* Button */
+.view-btn {
+  padding: 8px 14px;
+  background: #4f6bdc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.view-btn:hover {
+  background: #3c54c3;
+}

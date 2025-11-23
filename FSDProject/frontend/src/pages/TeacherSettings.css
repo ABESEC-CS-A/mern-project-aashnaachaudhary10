@@ -1,0 +1,95 @@
+.teacher-settings-page {
+  padding: 30px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+/* PAGE TITLE */
+.settings-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+/* CARDS */
+.settings-card {
+  background: #1b1f33;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  margin-bottom: 30px;
+  animation: fadeIn 0.4s ease;
+}
+
+.settings-card h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #9bb5ff;
+}
+
+.settings-card label {
+  display: block;
+  margin-top: 10px;
+  font-size: 15px;
+  color: #c8d0ff;
+}
+
+.settings-card input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  background: #2a3152;
+  border: 1px solid #3c4472;
+  border-radius: 8px;
+  color: white;
+  outline: none;
+  transition: 0.2s;
+}
+
+.settings-card input:focus {
+  border-color: #637bff;
+  box-shadow: 0 0 5px rgba(99,123,255,0.5);
+}
+
+/* SAVE BUTTON */
+.save-btn {
+  margin-top: 15px;
+  padding: 12px;
+  width: 100%;
+  background: #4f6bdc;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 17px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.save-btn:hover {
+  background: #3e54c2;
+  transform: translateY(-2px);
+}
+
+/* LOGOUT BUTTON */
+.logout-btn {
+  padding: 12px 25px;
+  background: #ff4b4b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  margin-top: 10px;
+  transition: 0.25s;
+}
+
+.logout-btn:hover {
+  background: #e63939;
+}
+
+/* FADE ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
