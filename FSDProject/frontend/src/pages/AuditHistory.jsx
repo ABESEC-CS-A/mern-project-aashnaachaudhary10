@@ -1,39 +1,39 @@
-import "./AuditHistory.css";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-export default function AuditHistory() {
-  const logs = [
-    { date: "14 Nov 2025", subject: "DBMS", status: "Present" },
-    { date: "14 Nov 2025", subject: "DSA", status: "Absent" },
-    { date: "13 Nov 2025", subject: "Maths", status: "Present" },
-    { date: "12 Nov 2025", subject: "OS", status: "Present" },
-    { date: "12 Nov 2025", subject: "DSA", status: "Absent" },
-  ];
+const AuditHistory = () => {
+  const [audit, setAudit] = useState([]);
+
+  useEffect(() => {
+    const loadAudit = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        const studentId = JSON.parse(localStorage.getItem("user"))._id;
+
+        const res = await axios.get(
+          `http://localhost:5000/api/student/audit/${studentId}`,
+          {
+            headers: { Authorization: `Bearer ${token}` }
+          }
+        );
+
+        setAudit(res.data);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+
+    loadAudit();
+  }, []);
 
   return (
-    <div className="audit-page">
-      <h1>📊 Attendance Audit History</h1>
-
-      <table className="audit-table">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Subject</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {logs.map((row, idx) => (
-            <tr key={idx}>
-              <td>{row.date}</td>
-              <td>{row.subject}</td>
-              <td className={row.status === "Present" ? "present" : "absent"}>
-                {row.status}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <div>
+      <h2>Audit Logs</h2>
+      {audit.map((x) => (
+        <p key={x._id}>{x.action} — {x.date}</p>
+      ))}
     </div>
   );
-}
+};
+
+export default AuditHistory;

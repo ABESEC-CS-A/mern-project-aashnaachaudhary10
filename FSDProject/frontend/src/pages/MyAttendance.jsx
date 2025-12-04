@@ -1,48 +1,37 @@
-import React from "react";
-import "./MyAttendance.css";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const MyAttendance = () => {
-  const subjects = [
-    { name: "DSA", held: 30, attended: 22 },
-    { name: "DBMS", held: 28, attended: 20 },
-    { name: "Maths", held: 25, attended: 17 },
-    { name: "OS", held: 26, attended: 21 },
-  ];
+  const [records, setRecords] = useState([]);
+
+  useEffect(() => {
+    const fetchAttendance = async () => {
+      try {
+        const token = localStorage.getItem("token");
+        const studentId = JSON.parse(localStorage.getItem("user"))._id;
+
+        const res = await axios.get(
+          `http://localhost:5000/api/student/attendance/${studentId}`,
+          {
+            headers: { Authorization: `Bearer ${token}` }
+          }
+        );
+
+        setRecords(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchAttendance();
+  }, []);
 
   return (
-    <div className="attendance-page">
-      <h2 className="page-title">My Attendance</h2>
-
-      <div className="attendance-table">
-        <div className="table-header">
-          <span>Subject</span>
-          <span>Held</span>
-          <span>Attended</span>
-          <span>Percentage</span>
-        </div>
-
-        {subjects.map((sub, index) => {
-          const percent = Math.round((sub.attended / sub.held) * 100);
-
-          return (
-            <div className="table-row" key={index}>
-              <span>{sub.name}</span>
-              <span>{sub.held}</span>
-              <span>{sub.attended}</span>
-
-              <div className="progress-wrapper">
-                <div className="progress-bar">
-                  <div
-                    className="progress-fill"
-                    style={{ width: `${percent}%` }}
-                  ></div>
-                </div>
-                <span className="percent">{percent}%</span>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+    <div>
+      <h2>My Attendance</h2>
+      {records.map((x) => (
+        <p key={x._id}>{x.date} — {x.status}</p>
+      ))}
     </div>
   );
 };
